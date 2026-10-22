@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portofolio Seminar Pendidikan | April Mulyanas Arif</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 120px 25px 70px;
+
+    background:
+        radial-gradient(circle at top right, #dbeafe, transparent 35%),
+        radial-gradient(circle at bottom left, #e0e7ff, transparent 35%),
+        #f8fafc;
+}
+
+.hero-content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: #dbeafe;
+    color: #1d4ed8;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.1;
+
+    color: #111827;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.identity {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 20px 30px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.identity strong {
+    display: block;
+
+    font-size: 19px;
+
+    color: #111827;
+}
+
+.identity small {
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section {
+    padding: 90px 25px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    margin-top: 8px;
+
+    font-size: 38px;
+
+    color: #111827;
+}
+
+.section-title p {
+    max-width: 700px;
+
+    margin: 10px auto;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   MENU MATA KULIAH
+===================================================== */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.course-card {
+    position: relative;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(37,99,235,0.12);
+}
+
+.course-number {
+    position: absolute;
+
+    right: 20px;
+    top: 10px;
+
+    font-size: 60px;
+    font-weight: 900;
+
+    color: #eff6ff;
+}
+
+.course-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    position: relative;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    position: relative;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   REVIEW BUTTON
+===================================================== */
+
+.review-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding: 10px 17px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.review-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   ARTEFAK
+===================================================== */
+
+.artifact-section {
+    background: white;
+}
+
+.artifact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.artifact-card {
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+.artifact-icon {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.artifact-category {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.artifact-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+.artifact-card p {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.artifact-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 8px 14px;
+
+    background: white;
+
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   REFLEKSI 4C
+===================================================== */
+
+.reflection-section {
+    background: #f8fafc;
+}
+
+.reflection-course {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.reflection-course h3 {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    color: #111827;
+}
+
+.four-c {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.reflection-card {
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.letter {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 11px;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.reflection-card h4 {
+    margin-bottom: 8px;
+}
+
+.reflection-card h4 span {
+    color: #2563eb;
+}
+
+.reflection-card p {
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   KAITAN PRAKTIS
+===================================================== */
+
+.practice-section {
+    background: white;
+}
+
+.practice-box {
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+}
+
+.practice-box h3 {
+    margin-bottom: 10px;
+}
+
+.practice-box p {
+    color: #4b5563;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   PENUTUP
+===================================================== */
+
+.final-section {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+}
+
+.final-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.final-content h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.final-content p {
+    color: #d1d5db;
+
+    font-size: 16px;
+}
+
+.quote {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border: 1px solid #374151;
+
+    border-radius: 18px;
+
+    color: #e5e7eb;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #0b1120;
+
+    color: #9ca3af;
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .course-grid,
+    .artifact-grid,
+    .four-c {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .reflection-course {
+        padding: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   REFLEKSI KOMPREHENSIF LK 3
+===================================================== */
+
+.lk3-section {
+    background: #eef4ff;
+}
+
+.lk3-intro {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #4b5563;
+}
+
+.lk3-answer {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 30px rgba(37,99,235,0.06);
+}
+
+.lk3-answer h3 {
+    color: #1d4ed8;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.lk3-answer p {
+    color: #4b5563;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+.lk3-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.lk3-plan {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.lk3-plan .plan-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 900;
+    margin-bottom: 13px;
+}
+
+.lk3-plan h4 {
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.lk3-plan p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.lk3-note {
+    font-size: 13px;
+    color: #6b7280;
+    text-align: center;
+    margin-top: 18px;
+}
+
+@media(max-width: 800px) {
+    .lk3-plan-grid {
+        grid-template-columns: 1fr;
+    }
+    .lk3-answer {
+        padding: 22px;
+    }
+}
+
+
+/* TEMA BARU: sage, peach, ivory - seluruh tautan media tetap */
+:root{--ink:#173b3d;--sage:#71958a;--peach:#e7b09a;--cream:#fffaf5;--muted:#657578}
+body{background:#fcf8f3;color:var(--ink)}
+nav{background:rgba(255,250,245,.96);border-bottom:1px solid #e9e0d7}
+.logo,.nav-links a:hover,.section-title span,.reflection-card h4 span{color:#2e665d}
+.nav-links{gap:17px;flex-wrap:wrap}.nav-links a{font-size:13px}
+.hero{background:radial-gradient(circle at 10% 20%,#f6dfd3,transparent 37%),radial-gradient(circle at 88% 78%,#dce9df,transparent 42%),#fffaf5}
+.hero h1,.section-title h2,.reflection-course h3{color:#173b3d}
+.hero h1 span{color:#547e70}.hero p,.section-title p,.course-card p,.artifact-card p,.reflection-card p{color:#586c69}
+.badge,.artifact-category{background:#f7ded2;color:#895442}
+.identity,.course-card,.reflection-course,.reflection-card,.artifact-card,.lk3-answer,.lk3-plan{border:1px solid #e9ded5;box-shadow:0 12px 30px rgba(45,73,64,.055)}
+.course-card,.reflection-course,.lk3-answer{background:#fffdfb}
+.course-card:hover,.artifact-card:hover{box-shadow:0 18px 35px rgba(78,115,103,.15)}
+.course-number{color:#e5eee8}.course-icon,.letter,.lk3-plan .plan-number{background:#dbe9df;color:#28594e}
+.review-button{background:#477d6d}.review-button:hover{background:#315f53}
+.artifact-section,.practice-section{background:#f8f2eb}.artifact-card,.reflection-card{background:#fffaf5}
+.reflection-section,.lk3-section{background:#f5f6f0}.practice-box{background:#e7eee6;border-left-color:#71958a}
+.artifact-button{color:#316d60;border-color:#c8dcd0}.final-section{background:#234a44}footer{background:#16362f}
+section{scroll-margin-top:80px}
+.profile-layout{display:grid;grid-template-columns:270px 1fr;align-items:center;gap:48px;text-align:left;max-width:1060px;margin:auto}
+.profile-photo-wrap{width:250px;height:250px;border-radius:50%;padding:9px;background:linear-gradient(145deg,#e7b09a,#8eac9d);box-shadow:0 20px 50px rgba(44,75,65,.15);margin:auto}
+.profile-photo{width:100%;height:100%;object-fit:cover;border-radius:50%;border:6px solid #fffaf5;background:#e9eee8}
+.profile-photo-fallback{width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e5ece6;font-size:76px;color:#52786c}
+.profile-layout .hero-content{text-align:left}.profile-layout .hero p{margin:0}.profile-layout .identity{margin-top:26px}
+.photo-note{font-size:12px;color:#687b73;text-align:center;margin-top:14px}
+.lk3-plan{background:#fffaf5}
+@media(max-width:800px){.profile-layout{grid-template-columns:1fr;gap:32px}.profile-layout .hero-content{text-align:center}.profile-layout .hero p{margin:auto}.profile-photo-wrap{width:205px;height:205px}.nav-links{display:flex;overflow-x:auto;flex-wrap:nowrap;max-width:70vw;gap:14px}.nav-links a{white-space:nowrap}.nav-container{padding:12px 15px}.logo{font-size:15px}.hero{padding-top:135px}}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav>
+
+<div class="nav-container">
+
+    <div class="logo">
+        PORTOFOLIO.
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#beranda">
+                Beranda
+            </a>
+        </li>
+
+        <li>
+            <a href="#matakuliah">
+                Mata Kuliah
+            </a>
+        </li>
+
+        <li>
+            <a href="#artefak">
+                Artefak
+            </a>
+        </li>
+
+        <li>
+            <a href="#refleksi">
+                Refleksi 4C
+            </a>
+        </li>
+
+        <li>
+            <a href="#praktis">
+                Kaitan Praktis
+            </a>
+        </li>
+
+        <li>
+            <a href="#lk3">
+                Refleksi LK 3
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     BERANDA
+===================================================== -->
+
+<section class="hero" id="beranda">
+
+<div class="profile-layout">
+<div class="profile-visual">
+<div class="profile-photo-wrap"><img class="profile-photo" src="media/profil.jpeg" alt="Foto profil April Mulyanas Arif" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="profile-photo-fallback" style="display:none" aria-label="Tempat foto profil">👤</div></div>
+<p class="photo-note"></p>
+</div>
+<div class="hero-content">
+
+    <div class="badge">
+        PORTOFOLIO SEMINAR PENDIDIKAN
+    </div>
+
+    <h1>
+
+        Perjalanan Menjadi
+        <br>
+
+        <span>Pendidik yang Reflektif</span>
+
+    </h1>
+
+    <p>
+
+        Portofolio reflektif pembelajaran semester 2 yang
+        menghubungkan pengalaman belajar, tantangan,
+        konsep yang diperoleh, artefak pembelajaran,
+        serta perubahan yang ingin diwujudkan sebagai pendidik.
+
+    </p>
+
+
+    <div class="identity">
+
+        <strong>
+            April Mulyanas Arif, S.Pd
+        </strong>
+
+        <small>
+            Pendidikan Pancasila · PPG Calon Guru 2026
+        </small>
+
+    </div>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- =====================================================
+     MATA KULIAH
+===================================================== -->
+
+<!-- =====================================================
+     LK 3: REFLEKSI PENGALAMAN BELAJAR SELAMA PPG
+===================================================== -->
+
+<section class="lk3-section" id="lk3">
+
+<div class="container">
+
+    <div class="section-title">
+        <span>Refleksi Komprehensif</span>
+        <h2>LK 3 · Refleksi Pengalaman Belajar Selama Mengikuti PPG</h2>
+        <p>
+            Meninjau kembali proses belajar selama PPG dan meneguhkan
+            komitmen untuk terus bertumbuh sebagai guru profesional.
+        </p>
+    </div>
+
+    <div class="lk3-intro">
+        Pengalaman belajar pada berbagai mata kuliah dan praktik pembelajaran
+        membantu saya memahami bahwa menjadi guru bukan hanya tentang
+        menyampaikan materi, tetapi juga tentang memahami kebutuhan murid,
+        membangun hubungan yang positif, serta terus memperbaiki kualitas
+        pembelajaran melalui refleksi.
+    </div>
+
+    <div class="lk3-source-file" style="margin: 22px 0 30px; padding: 22px 24px; background: #fffaf5; border: 1px solid #ead8ca; border-radius: 18px; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;">
+        <div>
+            <h3 style="margin: 0 0 5px; color: #23483f;">Dokumen LK 3</h3>
+            <p style="margin: 0; color: #5f6b66; font-size: 14px;">Buka atau unduh dokumen LK 3 yang telah diisi dalam format pdf.</p>
+        </div>
+        <a href="media/LEMBAR KERJA 3 (LK 3).pdf" target="_blank" rel="noopener" class="review-button" style="white-space: nowrap;">📄 Review Tugas / Buka LK 3 ↗</a>
+    </div>
+
+    <article class="lk3-answer">
+        <h3>1. Setelah mengikuti rangkaian refleksi pengalaman belajar, bagaimana seharusnya pendidikan di Indonesia?</h3>
+        <p>
+            Setelah mengikuti rangkaian pembelajaran dan refleksi selama PPG,
+            saya semakin memahami bahwa pendidikan di Indonesia seharusnya
+            berpusat pada murid dan memberikan kesempatan kepada setiap murid
+            untuk berkembang sesuai potensi, kebutuhan, serta karakteristiknya.
+            Pendidikan tidak cukup hanya berorientasi pada pencapaian nilai
+            akademik, tetapi juga perlu menumbuhkan karakter, kemandirian,
+            kemampuan berpikir kritis, kreativitas, kolaborasi, dan tanggung
+            jawab.
+        </p>
+        <p>
+            Proses pembelajaran perlu dirancang secara bermakna, inklusif,
+            dan kontekstual dengan mengakomodasi keberagaman kemampuan,
+            pengalaman, serta latar belakang murid. Guru perlu menggunakan
+            asesmen untuk memahami kebutuhan belajar, memberikan umpan balik,
+            dan menentukan tindak lanjut yang sesuai. Saya juga memandang
+            bahwa suasana belajar yang aman, nyaman, dan menghargai pendapat
+            akan membantu murid lebih berani terlibat dalam pembelajaran.
+        </p>
+        <p>
+            Pengalaman mempelajari pembelajaran sosial emosional, pembelajaran
+            mendalam, asesmen, kepemimpinan, dan praktik lapangan semakin
+            menguatkan pandangan saya bahwa pendidikan merupakan proses
+            memanusiakan manusia. Karena itu, pendidikan Indonesia seharusnya
+            tidak hanya membentuk murid yang mengetahui sesuatu, tetapi juga
+            mampu menerapkan pengetahuan, berperilaku baik, menghargai
+            keberagaman, dan berkontribusi secara positif di masyarakat.
+        </p>
+    </article>
+
+    <article class="lk3-answer">
+        <h3>2. Apa saja yang dapat saya lakukan untuk menjadi guru profesional?</h3>
+        <p>
+            Untuk menjadi guru profesional, saya perlu terus mengembangkan
+            kompetensi pedagogik, profesional, sosial, dan kepribadian.
+            Saya akan berusaha merancang pembelajaran berdasarkan tujuan,
+            karakteristik, serta kebutuhan murid; memilih strategi dan media
+            yang relevan; serta menggunakan asesmen awal, proses, dan akhir
+            untuk mengetahui perkembangan belajar mereka.
+        </p>
+        <p>
+            Saya juga perlu membiasakan diri melakukan refleksi setelah
+            mengajar, menerima masukan dari guru lain atau pembimbing, dan
+            memperbaiki rancangan pembelajaran berdasarkan hasil evaluasi.
+            Pengalaman praktik mengajar menunjukkan pentingnya kesiapan
+            mengelola kelas, menyampaikan instruksi dengan jelas, mengatur
+            waktu, serta menyesuaikan strategi ketika respons dan tingkat
+            keaktifan murid berbeda-beda.
+        </p>
+        <p>
+            Selain itu, saya akan terus belajar melalui pelatihan, komunitas
+            belajar guru, membaca sumber pendidikan yang relevan, dan
+            memanfaatkan teknologi secara bijak untuk mendukung pembelajaran.
+            Saya juga harus menjaga integritas, kedisiplinan, tanggung jawab,
+            komunikasi yang santun, dan keteladanan. Bagi saya, profesionalisme
+            bukan keadaan yang selesai setelah lulus PPG, melainkan komitmen
+            untuk belajar dan memperbaiki diri sepanjang menjalani profesi guru.
+        </p>
+    </article>
+
+    <article class="lk3-answer">
+        <h3>3. Tiga hal penting yang akan saya lakukan ketika memulai karier sebagai guru</h3>
+
+        <div class="lk3-plan-grid">
+            <div class="lk3-plan">
+                <div class="plan-number">01</div>
+                <h4>Mengenali kebutuhan murid</h4>
+                <p>
+                    Saya akan memetakan kemampuan awal, minat, karakteristik,
+                    dan kebutuhan belajar murid melalui pengamatan, komunikasi,
+                    serta asesmen diagnostik. Informasi tersebut akan menjadi
+                    dasar untuk memilih strategi pembelajaran yang lebih
+                    sesuai dan memberi dukungan kepada murid yang membutuhkan.
+                </p>
+            </div>
+
+            <div class="lk3-plan">
+                <div class="plan-number">02</div>
+                <h4>Merancang, mengevaluasi, dan memperbaiki pembelajaran</h4>
+                <p>
+                    Saya akan menyiapkan perangkat ajar, media, aktivitas,
+                    dan asesmen yang selaras dengan tujuan pembelajaran.
+                    Setelah mengajar, saya akan meninjau keterlibatan dan hasil
+                    belajar murid, mencatat kendala, serta menentukan perbaikan
+                    untuk pertemuan berikutnya.
+                </p>
+            </div>
+
+            <div class="lk3-plan">
+                <div class="plan-number">03</div>
+                <h4>Membangun budaya kelas yang positif dan terus belajar</h4>
+                <p>
+                    Saya akan membangun komunikasi yang menghargai murid,
+                    menerapkan disiplin secara mendidik, dan menciptakan
+                    lingkungan belajar yang aman serta inklusif. Saya juga
+                    akan berkolaborasi dengan rekan guru, meminta umpan balik,
+                    dan mengikuti kegiatan pengembangan kompetensi secara
+                    berkelanjutan.
+                </p>
+            </div>
+        </div>
+
+        <p style="margin-top:22px;">
+            Ketiga langkah tersebut menjadi komitmen awal saya untuk
+            menjalankan tugas secara bertanggung jawab dan menjadikan
+            kebutuhan serta perkembangan murid sebagai pertimbangan utama
+            dalam mengambil keputusan pembelajaran.
+        </p>
+    </article>
+
+    <p class="lk3-note">
+        LK 3 · Refleksi Pengalaman Belajar Selama Mengikuti PPG · April Mulyanas Arif, S.Pd.
+    </p>
+
+</div>
+</section>
+
+
+
+
+<section id="matakuliah">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>
+        Semester 2
+    </span>
+
+    <h2>
+        Mata Kuliah
+    </h2>
+
+    <p>
+        Kumpulan mata kuliah yang menjadi bagian dari
+        perjalanan pembelajaran dan pembentukan
+        kompetensi sebagai calon pendidik.
+    </p>
+
+</div>
+
+
+<div class="course-grid">
+
+
+<!-- =====================================================
+     MATA KULIAH 1
+===================================================== -->
+
+<div class="course-card">
+
+    <div class="course-number">
+        01
+    </div>
+
+    <div class="course-icon">
+        🧠
+    </div>
+
+    <h3>
+        Pendidikan Sosial Emosional
+    </h3>
+
+    <p>
+        Pembelajaran mengenai kesadaran diri,
+        pengelolaan diri, kesadaran sosial,
+        keterampilan berelasi, dan pengambilan
+        keputusan yang bertanggung jawab.
+    </p>
+
+    <!-- GANTI LINK DI BAWAH -->
+
+    <a
+        href="media/LEMBAR KERJA 3 (LK 3) PSE.pdf"
+        target="_blank"
+        class="review-button">
+
+        📖 Review Tugas ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     MATA KULIAH 2
+===================================================== -->
+
+<div class="course-card">
+
+    <div class="course-number">
+        02
+    </div>
+
+    <div class="course-icon">
+        🔎
+    </div>
+
+    <h3>
+        Pembelajaran Mendalam dan Asesmen Lanjut
+    </h3>
+
+    <p>
+        Pembelajaran bermakna, berkesadaran,
+        menggembirakan, serta asesmen yang
+        mendukung perkembangan peserta didik.
+    </p>
+
+    <a
+        href="media/LEMBAR KERJA 3 (LK 3) PMAL.pdf"
+        target="_blank"
+        class="review-button">
+
+        📖 Review Tugas ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     MATA KULIAH 3
+===================================================== -->
+
+<div class="course-card">
+
+    <div class="course-number">
+        03
+    </div>
+
+    <div class="course-icon">
+        🤝
+    </div>
+
+    <h3>
+        Projek Kepemimpinan
+    </h3>
+
+    <p>
+        Pengalaman kepemimpinan, kolaborasi,
+        komunikasi, tanggung jawab, serta
+        kontribusi dalam pelaksanaan projek.
+    </p>
+
+    <a
+        href="media/LEMBAR KERJA 3 (LK 3) Projek Kepemimpinan.pdf"
+        target="_blank"
+        class="review-button">
+
+        📖 Review Tugas ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     MATA KULIAH 4
+===================================================== -->
+
+<div class="course-card">
+
+    <div class="course-number">
+        04
+    </div>
+
+    <div class="course-icon">
+        🏫
+    </div>
+
+    <h3>
+        Praktik Pengenalan Lapangan (PPL)
+    </h3>
+
+    <p>
+        Pengalaman menerapkan teori pembelajaran
+        secara langsung melalui praktik di
+        lingkungan sekolah.
+    </p>
+
+    <a
+        href="media/LEMBAR KERJA 3 (LK 3) PPL Mandiri.pdf"
+        target="_blank"
+        class="review-button">
+
+        📖 Review Tugas ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     MATA KULIAH 5
+===================================================== -->
+
+<div class="course-card">
+
+    <div class="course-number">
+        05
+    </div>
+
+    <div class="course-icon">
+        ☪️
+    </div>
+
+    <h3>
+        Al-Islam dan Kemuhammadiyahan
+    </h3>
+
+    <p>
+        Nilai-nilai Al-Islam dan Kemuhammadiyahan
+        dalam pembentukan karakter, keteladanan,
+        dan profesionalitas pendidik.
+    </p>
+
+    <a
+        href="media/LEMBAR KERJA 3 (LK 3) Profesionalisme Berbasis AIK.pdf"
+        target="_blank"
+        class="review-button">
+
+        📖 Review Tugas ↗
+
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARTEFAK
+===================================================== -->
+
+<section
+    class="artifact-section"
+    id="artefak">
+
+<div class="container">
+
+
+<div class="section-title">
+
+    <span>
+        Bukti Pembelajaran
+    </span>
+
+    <h2>
+        Artefak Pembelajaran
+    </h2>
+
+    <p>
+        Kumpulan artefak yang menjadi bukti dukung
+        terhadap proses pembelajaran dan hasil refleksi.
+    </p>
+
+</div>
+
+
+<div class="artifact-grid">
+
+
+<!-- ARTEFAK 1 -->
+
+<div class="artifact-card">
+
+    <div class="artifact-icon">
+        📄
+    </div>
+
+    <div class="artifact-category">
+        Pembelajaran Sosial Emosional
+    </div>
+    <h3>
+        Rencana Pembelajaran Sosial Emosional dan Video Pembelajaran
+    </h3>
+
+
+    <p>
+        Artefak yang digunakan adalah Modul Pembelajaran PSE dan 
+        Video Pembelajaran PSE yang dibuat dalam proses perancangan dan pelaksanaan pembelajaran. Artefak tersebut menjadi bukti dukung refleksi karena menunjukkan penerapan kompetensi sosial emosional dalam pembelajaran, seperti kesadaran diri, 
+        pengelolaan diri, kesadaran sosial, dan keterampilan berelasi.
+    </p>
+
+    <a
+        href="https://youtu.be/ThuvWcc1Efs?si=kUO1eJLOChOLjsCT"
+        target="_blank"
+        class="artifact-button">
+
+        Tonton Artefak video  ↗
+
+    </a>
+    <br>
+    <a
+        href="media/RPSE Materi PP Bab 1 subbab B.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak RPSE  ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- ARTEFAK 2 -->
+
+<div class="artifact-card">
+
+    <div class="artifact-icon">
+        🎬
+    </div>
+
+    <div class="artifact-category">
+        Pembelajaran Mendalam dan Asesmen Lanjut
+    </div>
+    <h3>
+        Laporan Perencanaan dan Refleksi Pembelajaran Mendalam
+    </h3>
+
+    <p>
+        Artefak Laporan Perencanaan dan Refleksi Pembelajaran Mendalam berisi analisis kebutuhan murid, hasil asesmen awal, rancangan pembelajaran berbasis DUP, serta refleksi profesional. Artefak ini berkaitan dengan proses pembelajaran karena membantu saya merancang pembelajaran yang sesuai dengan kebutuhan murid, menentukan strategi yang tepat, dan mengevaluasi efektivitas
+         pembelajaran sebagai dasar perbaikan selanjutnya.
+    </p>
+
+    <a
+        href="media/Laporan Perencanaan dan Refleksi Pembelajaran Mendalam.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Laporan dan Refleksi↗
+
+    </a>
+
+</div>
+
+
+
+<!-- ARTEFAK 3 -->
+
+<div class="artifact-card">
+
+    <div class="artifact-icon">
+        📊
+    </div>
+
+    <div class="artifact-category">
+        Projek Kepemimpinan
+    </div>
+
+    <h3>
+         Proposal Projek Kardus Cerdas dan Instrumen Penelitian Kardus Cerdas
+    </h3>
+
+    <p>
+       Artefak Proposal Projek Kardus Cerdas dan Instrumen Penelitian Kardus Cerdas berkontribusi terhadap perkembangan kemampuan kepemimpinan saya dalam merencanakan kegiatan, membagi tugas, berkoordinasi, dan mengambil keputusan secara bertanggung jawab. Artefak ini juga membantu saya mengembangkan kemampuan bekerja sama, menyelesaikan masalah,
+        serta mengevaluasi keberhasilan dan dampak projek..
+    </p>
+
+    <a
+        href="media/Proposal Project Kepemimpinan_April_Mulyanas_Arif.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Porposal↗
+
+    </a>
+    <br>
+    <a
+        href="media/Intrumen Penelitian Kardus Cerdas.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Instrumen ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- ARTEFAK 4 -->
+
+<div class="artifact-card">
+
+    <div class="artifact-icon">
+        🎥
+    </div>
+
+    <div class="artifact-category">
+        Praktek Pengalaman Lapangan Semester 2
+    </div>
+
+    <h3>
+        Video Pembelajaran dan Modul Ajar
+    </h3>
+
+    <p>
+        Artefak Video Pembelajaran dan Modul Ajar menjadi bukti perkembangan kompetensi pedagogis saya dalam merancang dan melaksanakan pembelajaran sesuai kebutuhan peserta didik. Melalui kedua artefak tersebut, saya dapat mengevaluasi kemampuan mengelola kelas, menerapkan strategi pembelajaran, menggunakan media pembelajaran, serta
+         melakukan refleksi untuk meningkatkan kualitas pembelajaran.
+    </p>
+
+    <a
+        href="https://youtu.be/GTD_gLLosQc?si=-PCk_SuYtRE5XjvR"
+        target="_blank"
+        class="artifact-button">
+
+        Tonton Artefak Video ↗
+
+    </a>
+    <br>
+    <a
+        href="media/RPM Siklus 1 PM 1 Bab 1 Sub Bab B.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Modul ↗
+
+    </a>
+
+</div>
+
+
+
+<!-- ARTEFAK 5 -->
+
+<div class="artifact-card">
+
+    <div class="artifact-icon">
+        📚
+    </div>
+
+    <div class="artifact-category">
+        Profesionalisme Berbasis Al-Islam dan Kemuhammadiyahan
+    </div>
+
+    <h3>
+    Profesionalisme Berbasis Al-Islam dan Kemuhammadiyahan
+    </h3>
+
+    <p>
+        Artefak Proposal Projek Kardus Cerdas dan Instrumen Penelitian Kardus Cerdas berkontribusi terhadap perkembangan kemampuan kepemimpinan saya melalui proses perencanaan, pembagian tugas, koordinasi, dan pengambilan keputusan dalam projek. Artefak tersebut juga membantu saya belajar
+         bertanggung jawab, bekerja sama, serta mengevaluasi proses dan hasil projek.
+    </p>
+
+    <a
+        href="media/Proposal Kegiatan AIK.pdf"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Proposal↗
+
+    </a>
+    <br>
+    <a
+        href="https://youtu.be/9W0QyDx0iVI?si=LfxLq-zYqSoQPANw"
+        target="_blank"
+        class="artifact-button">
+
+        Tonton Artefak Video Kegiatan ↗
+
+    </a>
+    <br>
+     <a
+        href="media/Artikel Ilmiah.docx"
+        target="_blank"
+        class="artifact-button">
+
+        Lihat Artefak Artikel ↗
+
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REFLEKSI 4C
+===================================================== -->
+
+<section
+    class="reflection-section"
+    id="refleksi">
+
+<div class="container">
+
+
+<div class="section-title">
+
+    <span>
+        Refleksi
+    </span>
+
+    <h2>
+        Refleksi 4C
+    </h2>
+
+    <p>
+        Connection, Challenge, Concept, dan Change
+        sebagai kerangka untuk memahami pengalaman
+        pembelajaran dan perkembangan diri sebagai pendidik.
+    </p>
+
+</div>
+
+
+
+<!-- =====================================================
+     REFLEKSI PSE
+===================================================== -->
+
+<div class="reflection-course">
+
+    <h3>
+        01 · Pendidikan Sosial Emosional
+    </h3>
+
+    <div class="four-c">
+
+
+        <div class="reflection-card">
+
+            <div class="letter">
+                C
+            </div>
+
+            <h4>
+                <span>Connection</span>
+            </h4>
+
+            <p style="text-align: justify;">
+
+                Mata kuliah Pembelajaran 
+                Sosial Emosional memiliki 
+                keterkaitan yang erat dengan 
+                peran saya sebagai calon 
+                guru karena memberikan 
+                pemahaman bahwa peserta 
+                didik tidak hanya 
+                membutuhkan 
+                perkembangan dalam aspek 
+                akademik, tetapi juga dalam 
+                aspek sosial dan emosional. 
+                Guru perlu memahami kondisi 
+                peserta didik, membangun 
+                hubungan yang positif, serta 
+                menciptakan lingkungan 
+                belajar yang aman dan 
+                nyaman. 
+                Pembelajaran sosial 
+                emosional juga membantu 
+                saya memahami bahwa 
+                setiap peserta didik memiliki 
+                karakter, kemampuan 
+                berinteraksi, dan tingkat 
+                kepercayaan diri yang 
+                berbeda. Oleh karena itu, 
+                guru perlu memberikan ruang 
+                bagi peserta didik untuk 
+                berkomunikasi, bekerja 
+                sama, menyampaikan 
+                pendapat, dan belajar 
+                menghargai orang lain. 
+                Pemahaman tersebut saya 
+                temukan dalam pengalaman 
+                mengajar selama PPL di SMA 
+                Negeri 3 Mataram, terutama 
+                ketika menghadapi peserta 
+                didik dengan karakter dan 
+                tingkat keaktifan yang 
+                berbeda. 
+            </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+            <div class="letter">
+                C
+            </div>
+
+            <h4>
+                <span>Challenge</span>
+            </h4>
+
+            <p style="text-align: justify;">
+                Tantangan yang saya alami 
+                adalah memahami kondisi 
+                sosial dan emosional peserta 
+                didik yang tidak selalu dapat 
+                terlihat secara langsung. 
+                Peserta didik yang pasif 
+                dalam pembelajaran belum 
+                tentu tidak memahami materi. 
+                Mereka mungkin 
+                membutuhkan waktu, 
+                dorongan, atau suasana yang 
+                lebih nyaman untuk berani 
+                terlibat dalam pembelajaran. 
+                Saya juga menyadari bahwa 
+                penerapan PSE 
+                membutuhkan kemampuan 
+                guru dalam mengelola emosi 
+                dan merespons berbagai 
+                situasi secara tepat. Guru 
+                perlu tetap tenang ketika 
+                menghadapi kelas yang 
+                kurang kondusif dan mampu 
+                memberikan respons yang 
+                tidak membuat peserta didik 
+                merasa tertekan. Hal tersebut 
+                menjadi pengalaman yang 
+                saya rasakan selama 
+                melaksanakan PPL di SMA 
+                Negeri 3 Mataram ketika 
+                mengelola pembelajaran 
+                dengan peserta didik yang 
+                memiliki respons dan karakter 
+                yang beragam. 
+            </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+            <div class="letter">
+                C
+            </div>
+
+            <h4>
+                <span>Concept</span>
+            </h4>
+
+            <p style="text-align: justify;">
+                pelajari adalah lima 
+                kompetensi Pembelajaran 
+                Sosial Emosional, yaitu 
+                kesadaran diri, manajemen 
+                diri, kesadaran sosial, 
+                keterampilan berelasi, dan 
+                pengambilan keputusan yang 
+                bertanggung jawab. Kelima 
+                kompetensi tersebut 
+                membantu peserta didik 
+                mengenali dirinya, mengelola 
+                emosi, memahami orang lain, 
+                membangun hubungan yang 
+                baik, serta mengambil 
+                keputusan secara tepat. 
+                Saya memahami bahwa 
+                kelima kompetensi tersebut 
+                dapat dikembangkan melalui 
+                berbagai kegiatan 
+                pembelajaran seperti diskusi kelompok, kerja sama, 
+                analisis kasus, penyampaian 
+                pendapat, dan refleksi. Hal 
+                tersebut relevan dengan 
+                pembelajaran yang saya 
+                lakukan selama PPL di SMA 
+                Negeri 3 Mataram, ketika 
+                kegiatan diskusi memberikan 
+                kesempatan kepada peserta 
+                didik untuk bekerja sama, 
+                berkomunikasi, dan 
+                menghargai pendapat teman.
+            </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+            <div class="letter">
+                C
+            </div>
+
+            <h4>
+                <span>Change</span>
+            </h4>
+
+            <p style="text-align: justify;">
+                Setelah mempelajari 
+                Pembelajaran Sosial 
+                Emosional, saya ingin lebih 
+                memperhatikan kondisi 
+                peserta didik secara 
+                menyeluruh dan tidak hanya 
+                berfokus pada hasil belajar 
+                akademik. Saya ingin 
+                menciptakan pembelajaran 
+                yang memberikan 
+                kesempatan kepada peserta 
+                didik untuk merasa aman, 
+                dihargai, aktif berkomunikasi, 
+                dan mampu bekerja sama 
+                dengan orang lain. 
+                Saya juga ingin lebih mampu 
+                mengelola emosi dan 
+                membangun komunikasi 
+                yang positif ketika 
+                menghadapi berbagai situasi 
+                dalam pembelajaran. 
+                Pengalaman selama PPL di 
+                SMA Negeri 3 Mataram 
+                menjadi pembelajaran bagi 
+                saya bahwa kemampuan 
+                tersebut sangat diperlukan 
+                dalam menghadapi 
+                keberagaman karakter 
+                peserta didik di kelas. 
+                Dengan pemahaman 
+                tersebut, saya ingin terus 
+                mengembangkan 
+                kemampuan dalam 
+                menerapkan PSE agar dapat 
+                menjadi guru yang tidak 
+                hanya membantu peserta 
+                didik memahami materi, tetapi 
+                juga mendukung perkembangan sosial dan 
+                emosional mereka.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REFLEKSI PEMBELAJARAN MENDALAM
+===================================================== -->
+
+<div class="reflection-course">
+
+    <h3>
+        02 · Pembelajaran Mendalam dan Asesmen Lanjut
+    </h3>
+
+    <div class="four-c">
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Connection</span></h4>
+            <p style="text-align: justify;">
+                Mata kuliah Pembelajaran 
+                Mendalam dan Asesmen 
+                Lanjut memiliki keterkaitan 
+                yang sangat erat dengan 
+                peran saya sebagai calon 
+                guru karena memberikan 
+                pemahaman bahwa 
+                pembelajaran perlu 
+                dirancang agar peserta didik 
+                tidak hanya memperoleh 
+                pengetahuan, tetapi juga 
+                mampu memahami, 
+                mengolah, menerapkan, dan 
+                merefleksikan apa yang 
+                dipelajari. Pembelajaran 
+                perlu memberikan 
+                pengalaman yang bermakna 
+                sehingga peserta didik dapat 
+                menghubungkan materi 
+                dengan kehidupan nyata. 
+                Saya juga memahami bahwa 
+                asesmen merupakan bagian 
+                yang tidak terpisahkan dari 
+                proses pembelajaran. 
+                Asesmen tidak hanya 
+                digunakan untuk mengetahui 
+                hasil belajar, tetapi juga 
+                untuk memperoleh informasi 
+                mengenai perkembangan 
+                peserta didik dan menjadi 
+                dasar bagi guru dalam 
+                menentukan tindak lanjut 
+                pembelajaran. Pemahaman 
+                tersebut saya rasakan 
+                selama melaksanakan PPL 
+                di SMA Negeri 3 Mataram, 
+                ketika saya perlu 
+                memperhatikan keterlibatan, 
+                pemahaman, dan 
+                perkembangan peserta didik 
+                selama proses pembelajaran. 
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Challenge</span></h4>
+            <p style="text-align: justify;">
+                Salah satu tantangan yang 
+                saya alami adalah 
+                merancang pembelajaran 
+                yang benar-benar 
+                mendorong peserta didik 
+                untuk berpikir lebih 
+                mendalam, bukan sekadar 
+                memahami atau mengingat 
+                materi. Guru perlu 
+                memberikan pertanyaan, 
+                aktivitas, dan permasalahan 
+                yang mendorong peserta 
+                didik untuk menganalisis, 
+                menghubungkan konsep, 
+                menyampaikan alasan, serta 
+                menerapkan pengetahuan 
+                dalam situasi yang relevan. 
+                Tantangan lainnya adalah 
+                menentukan asesmen yang 
+                sesuai dengan tujuan 
+                pembelajaran. Saya belajar 
+                bahwa asesmen perlu 
+                dirancang sejak awal dan 
+                tidak hanya dilakukan pada 
+                akhir pembelajaran. Guru 
+                perlu menggunakan 
+                informasi dari proses 
+                asesmen untuk memberikan 
+                umpan balik dan menentukan 
+                perbaikan pembelajaran. Hal 
+                tersebut menjadi 
+                pengalaman yang saya temui 
+                selama PPL di SMA Negeri 3 
+                Mataram, terutama ketika 
+                saya perlu menyesuaikan 
+                kegiatan pembelajaran 
+                dengan respons dan 
+                pemahaman peserta didik.
+            </p >
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Concept</span></h4>
+            <p style="text-align: justify;">
+                Konsep utama yang saya 
+                pelajari adalah bahwa 
+                pembelajaran mendalam 
+                perlu memberikan 
+                pengalaman belajar yang 
+                berkesadaran, bermakna, 
+                dan menggembirakan. 
+                Peserta didik perlu dilibatkan 
+                secara aktif dalam proses 
+                pembelajaran sehingga 
+                mereka tidak hanya 
+                menerima informasi, tetapi 
+                mampu membangun 
+                pemahaman dan 
+                menghubungkan 
+                pembelajaran dengan 
+                konteks kehidupan mereka. 
+                Saya juga memahami 
+                pentingnya asesmen sebagai 
+                bagian dari proses 
+                pembelajaran. Asesmen 
+                dapat digunakan untuk 
+                memperoleh informasi 
+                mengenai pemahaman 
+                peserta didik, memberikan 
+                umpan balik, dan membantu 
+                guru menentukan langkah 
+                pembelajaran selanjutnya. 
+                Konsep tersebut semakin 
+                saya pahami melalui 
+                pengalaman PPL di SMA 
+                Negeri 3 Mataram, ketika 
+                kegiatan pembelajaran, 
+                asesmen, dan refleksi perlu 
+                saling berkaitan untuk 
+                mengetahui perkembangan 
+                peserta didik.
+            </p >
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Change</span></h4>
+            <p style="text-align: justify;">
+                Setelah mempelajari mata 
+                kuliah Pembelajaran 
+                Mendalam dan Asesmen 
+                Lanjut, saya ingin lebih 
+                memperhatikan kualitas 
+                pengalaman belajar yang 
+                diberikan kepada peserta 
+                didik. Saya ingin merancang 
+                pembelajaran yang tidak 
+                hanya mengejar 
+                penyelesaian materi, tetapi 
+                memberikan kesempatan 
+                kepada peserta didik untuk 
+                berpikir, berdiskusi, 
+                memecahkan masalah, 
+                menghubungkan materi 
+                dengan kehidupan nyata, 
+                dan melakukan refleksi. Saya 
+                juga ingin menggunakan 
+                asesmen secara lebih 
+                terencana dan berkelanjutan. 
+                Hasil asesmen tidak hanya 
+                saya gunakan sebagai dasar 
+                pemberian nilai, tetapi juga 
+                sebagai informasi untuk 
+                mengetahui kebutuhan 
+                peserta didik dan 
+                menentukan perbaikan 
+                pembelajaran. Pengalaman 
+                selama PPL di SMA Negeri 3 
+                Mataram semakin 
+                menguatkan pemahaman 
+                saya bahwa pembelajaran 
+                yang baik membutuhkan 
+                proses perencanaan, 
+                pelaksanaan, asesmen, dan 
+                refleksi yang saling 
+                berkesinambungan. Dengan 
+                pemahaman tersebut, saya 
+                ingin terus mengembangkan 
+                kemampuan sebagai guru 
+                yang mampu menciptakan 
+                pembelaja  ran yang 
+                mendalam sekaligus 
+                menggunakan asesmen 
+                sebagai bagian dari proses 
+                untuk membantu peserta 
+                didik berkembang. 
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REFLEKSI PROJEK KEPEMIMPINAN
+===================================================== -->
+
+<div class="reflection-course">
+
+    <h3>
+        03 · Projek Kepemimpinan
+    </h3>
+
+    <div class="four-c">
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Connection</span></h4>
+            <p style="text-align: justify;">
+                Kepemimpinan memiliki 
+                keterkaitan yang erat dengan 
+                peran saya sebagai calon 
+                guru karena memberikan 
+                pemahaman bahwa guru 
+                tidak hanya berperan 
+                sebagai pengajar di dalam 
+                kelas, tetapi juga sebagai 
+                pemimpin pembelajaran yang 
+                mampu menginisiasi, 
+                mengelola, dan 
+                menggerakkan berbagai 
+                kegiatan yang memberikan 
+                dampak positif bagi peserta 
+                didik maupun lingkungan 
+                sekolah. Seorang guru perlu 
+                memiliki kemampuan 
+                berkomunikasi, bekerja 
+                sama, mengambil keputusan, 
+                mengelola kegiatan, serta 
+                bertanggung jawab terhadap 
+                proses yang dijalankan. 
+                Melalui mata kuliah ini, saya 
+                memahami bahwa 
+                kepemimpinan tidak selalu 
+                berarti menjadi orang yang 
+                berada di posisi paling 
+                depan. Kepemimpinan juga 
+                dapat diwujudkan melalui 
+                kemampuan mengajak orang 
+                lain bekerja sama, 
+                mendengarkan pendapat, 
+                membagi tugas, 
+                menyelesaikan masalah, dan 
+                memastikan tujuan bersama 
+                dapat tercapai. Pemahaman 
+                tersebut semakin saya 
+                rasakan melalui pengalaman 
+                Praktek Pembelajaran di 
+                Yayasan Pondok Pesantren 
+                Mujahidil Fallah sehingga 
+                mampu bekerja sama  dengan santri dan santriwati 
+                maupun pihak pengelola 
+                pondok pesanntren.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Challenge</span></h4>
+            <p style="text-align: justify;">
+                Salah satu tantangan yang 
+                saya alami adalah 
+                bagaimana mengelola kerja 
+                sama dengan orang lain 
+                yang memiliki karakter, 
+                pendapat, dan cara kerja 
+                yang berbeda. Dalam sebuah 
+                kegiatan atau projek, tidak 
+                semua anggota memiliki 
+                tingkat keterlibatan dan 
+                pemahaman yang sama 
+                sehingga diperlukan 
+                komunikasi yang baik agar 
+                setiap orang dapat 
+                menjalankan perannya. 
+                Saya juga belajar bahwa 
+                menjadi pemimpin tidak 
+                berarti harus mengambil 
+                semua keputusan sendiri. 
+                Seorang pemimpin perlu 
+                mampu mendengarkan 
+                masukan, 
+                mempertimbangkan berbagai 
+                pilihan, membagi tanggung 
+                jawab, dan mengambil 
+                keputusan berdasarkan 
+                tujuan bersama. Pengalaman 
+                tersebut saya rasakan ketika 
+                melaksanakan berbagai 
+                kegiatan selama proses 
+                perencanaan dan 
+                pelaksanaan projek di 
+                Yayasan pondok pesantren 
+                mujahidil falah yang 
+                membutuhkan koordinasi, 
+                komunikasi, dan kerja sama 
+                dengan orang lain.
+                            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Concept</span></h4>
+            <p style="text-align: justify;">
+                Konsep utama yang saya 
+                pelajari adalah bahwa 
+                kepemimpinan merupakan 
+                kemampuan untuk 
+                memengaruhi dan 
+                menggerakkan diri sendiri 
+                maupun orang lain menuju 
+                tujuan yang telah disepakati. 
+                Kepemimpinan 
+                membutuhkan tanggung 
+                jawab, komunikasi, 
+                kolaborasi, kemampuan 
+                mengambil keputusan, serta 
+                kemampuan menyelesaikan 
+                masalah. 
+                Saya juga memahami bahwa 
+                seorang guru perlu memiliki 
+                kepemimpinan yang dapat 
+                memberikan keteladanan 
+                dan membangun hubungan 
+                positif dengan peserta didik. 
+                Guru perlu mampu 
+                menciptakan lingkungan 
+                belajar yang mendorong 
+                peserta didik untuk 
+                berpartisipasi, bekerja sama, 
+                dan memiliki rasa tanggung 
+                jawab. Pemahaman tersebut 
+                menjadi semakin nyata bagi 
+                saya ketika menjalani projek 
+                Mataram dan berusaha 
+                mengelola pembelajaran 
+                serta membangun 
+                keterlibatan peserta didik 
+                dalam berbagai kegiatan.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Change</span></h4>
+            <p style="text-align: justify;">
+                Setelah mempelajari mata 
+                kuliah Projek Kepemimpinan, 
+                saya ingin meningkatkan 
+                kemampuan dalam 
+                berkomunikasi, 
+                berkolaborasi, mengambil 
+                keputusan, dan mengelola 
+                kegiatan secara lebih 
+                bertanggung jawab. Saya 
+                ingin menjadi guru yang 
+                mampu mengambil inisiatif 
+                ketika menemukan 
+                permasalahan dan tidak 
+                hanya menunggu arahan 
+                untuk mencari solusi. 
+                Saya juga ingin membangun 
+                kepemimpinan yang lebih 
+                terbuka dengan memberikan 
+                ruang kepada orang lain 
+                untuk menyampaikan 
+                pendapat dan berkontribusi. 
+                Dalam pembelajaran, saya 
+                ingin mendorong peserta 
+                didik untuk memiliki tanggung 
+                jawab dan keberanian dalam 
+                mengambil peran. 
+                Pengalaman selama 
+                menjalani program kardu 
+                cerdas ini sehingga membuat 
+                saya semakin memahami 
+                bahwa kemampuan 
+                kepemimpinan sangat 
+                dibutuhkan guru dalam 
+                mengelola pembelajaran dan 
+                membangun kerja sama. 
+                Ke depan, saya ingin 
+                menerapkan kepemimpinan 
+                bukan hanya dalam kegiatan 
+                projek, tetapi juga dalam 
+                kehidupan sehari-hari 
+                sebagai guru. Saya ingin 
+                menjadi pribadi yang mampu 
+                menjadi teladan, dapat 
+                dipercaya, bertanggung 
+                jawab, dan mampu mengajak 
+                orang lain bergerak bersama 
+                untuk mencapai tujuan yang 
+                positif.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REFLEKSI PPL
+===================================================== -->
+
+<div class="reflection-course">
+
+    <h3>
+        04 · Praktik Pengenalan Lapangan (PPL)
+    </h3>
+
+    <div class="four-c">
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Connection</span></h4>
+            <p style="text-align: justify;">
+                Mata kuliah Praktik 
+                Pengalaman Lapangan 
+                (PPL) Mandiri memiliki 
+                keterkaitan yang sangat erat 
+                dengan peran saya sebagai 
+                calon guru karena 
+                memberikan kesempatan 
+                untuk menerapkan 
+                pengetahuan dan 
+                keterampilan yang telah 
+                dipelajari selama perkuliahan 
+                secara lebih mandiri dalam 
+                situasi pembelajaran yang 
+                nyata. Melalui PPL Mandiri, 
+                saya belajar bahwa menjadi 
+                guru tidak hanya berkaitan 
+                dengan kemampuan 
+                menyampaikan materi, tetapi 
+                juga kemampuan 
+                merencanakan 
+                pembelajaran, mengelola 
+                kelas, melaksanakan 
+                asesmen, berkomunikasi 
+                dengan peserta didik, dan 
+                melakukan refleksi terhadap 
+                pembelajaran. PPL Mandiri 
+                juga memberikan 
+                pengalaman yang lebih luas 
+                dalam mengambil keputusan 
+                selama proses pembelajaran. 
+                Saya belajar untuk 
+                menyesuaikan strategi, 
+                media, dan aktivitas 
+                pembelajaran berdasarkan 
+                kondisi kelas dan kebutuhan 
+                peserta didik. Pengalaman 
+                tersebut saya peroleh selama 
+                melaksanakan PPL Mandiri 
+                di SMA Negeri 3 Mataram 
+                sebagai guru praktikan 
+                Pendidikan Pancasila.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Challenge</span></h4>
+            <p style="text-align: justify;">
+                Salah satu tantangan yang 
+                saya alami adalah mengelola 
+                pembelajaran secara lebih 
+                mandiri dan menghadapi 
+                karakteristik peserta didik 
+                yang beragam. Tidak semua 
+                kegiatan yang telah 
+                direncanakan dapat berjalan 
+                persis sesuai dengan kondisi 
+                di kelas. Oleh karena itu, 
+                saya perlu memiliki 
+                kemampuan untuk 
+                menyesuaikan pembelajaran 
+                tanpa mengabaikan tujuan 
+                yang telah ditetapkan. Saya 
+                juga menghadapi tantangan 
+                dalam menjaga keterlibatan 
+                peserta didik selama 
+                pembelajaran. Peserta didik 
+                memiliki tingkat keaktifan, 
+                keberanian menyampaikan 
+                pendapat, dan kemampuan 
+                memahami materi yang 
+                berbeda. Kondisi tersebut 
+                membuat saya perlu 
+                menggunakan pendekatan 
+                dan aktivitas yang dapat 
+                memberikan kesempatan 
+                kepada lebih banyak peserta 
+                didik untuk terlibat. 
+                Pengalaman tersebut saya 
+                rasakan selama 
+                melaksanakan pembelajaran 
+                secara mandiri di SMA 
+                Negeri 3 Mataram.
+             </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Concept</span></h4>
+            <p style="text-align: justify;">
+                Konsep utama yang saya 
+                pelajari melalui PPL Mandiri 
+                adalah pentingnya 
+                kemampuan guru dalam 
+                merencanakan, 
+                melaksanakan, menilai, dan 
+                merefleksikan pembelajaran 
+                secara berkelanjutan. Saya 
+                memahami bahwa 
+                pembelajaran yang baik 
+                membutuhkan persiapan 
+                yang matang, tetapi guru 
+                juga harus mampu 
+                beradaptasi ketika 
+                menemukan kondisi yang 
+                berbeda dari perencanaan. 
+                Saya juga memahami 
+                pentingnya refleksi dalam 
+                meningkatkan kualitas
+                pembelajaran. Melalui 
+                refleksi, guru dapat 
+                mengetahui bagian 
+                pembelajaran yang sudah 
+                berjalan dengan baik, 
+                menemukan kendala yang 
+                muncul, dan menentukan 
+                perbaikan untuk 
+                pembelajaran berikutnya. 
+                Pemahaman tersebut 
+                semakin berkembang melalui 
+                pengalaman saya selama 
+                PPL Mandiri di SMA Negeri 3 
+                Mataram, ketika saya 
+                melakukan evaluasi terhadap 
+                proses pembelajaran dan 
+                menyesuaikan strategi pada 
+                pertemuan berikutnya.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Change</span></h4>
+            <p style="text-align: justify;">
+                Setelah mengikuti PPL 
+                Mandiri, saya ingin menjadi 
+                guru yang lebih mandiri 
+                dalam merancang dan 
+                melaksanakan pembelajaran, 
+                tetapi tetap terbuka terhadap 
+                masukan dan evaluasi. Saya 
+                ingin lebih mampu membaca 
+                kondisi kelas dan 
+                menyesuaikan strategi 
+                pembelajaran dengan 
+                kebutuhan peserta didik. 
+                Saya juga ingin 
+                meningkatkan kemampuan 
+                dalam mengelola kelas, 
+                memberikan instruksi yang 
+                lebih jelas, menggunakan 
+                media pembelajaran secara 
+                efektif, serta melaksanakan 
+                asesmen yang dapat 
+                memberikan informasi 
+                mengenai perkembangan 
+                peserta didik. Pengalaman 
+                selama PPL Mandiri di SMA 
+                Negeri 3 Mataram membuat 
+                saya semakin menyadari 
+                bahwa kemampuan tersebut 
+                perlu terus dikembangkan 
+                melalui pengalaman dan 
+                refleksi. Ke depan, saya ingin 
+                menjadikan setiap 
+                pengalaman mengajar 
+                sebagai bahan untuk 
+                memperbaiki diri. Saya 
+                menyadari bahwa menjadi 
+                guru merupakan proses 
+                belajar yang berkelanjutan, 
+                sehingga saya perlu terus 
+                mengevaluasi praktik 
+                pembelajaran dan 
+                mengembangkan kompetensi 
+                profesional saya.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REFLEKSI AIK
+===================================================== -->
+
+<div class="reflection-course">
+
+    <h3>
+        05 · Al-Islam dan Kemuhammadiyahan
+    </h3>
+
+    <div class="four-c">
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Connection</span></h4>
+            <p style="text-align: justify;">
+                Mata kuliah Profesionalisme 
+                Guru Berbasis Al Islam 
+                Kemuhammadiyahan 
+                memberikan pemahaman 
+                bahwa menjadi guru tidak 
+                hanya berkaitan dengan 
+                kemampuan mengajar, tetapi 
+                juga dengan sikap, akhlak, 
+                tanggung jawab, 
+                keteladanan, dan komitmen 
+                dalam menjalankan profesi. 
+                Guru memiliki peran penting 
+                dalam memberikan contoh 
+                melalui perilaku sehari-hari, 
+                sehingga profesionalisme 
+                perlu dibangun bersama 
+                dengan nilai-nilai keislaman 
+                dan kemuhammadiyahan. 
+                Pemahaman ini semakin 
+                saya rasakan ketika 
+                menjalankan PPL sebagai 
+                calon guru Pendidikan 
+                Pancasila di SMA Negeri 3 
+                Mataram, karena cara 
+                berkomunikasi, bersikap, dan 
+                memperlakukan peserta didik 
+                juga menjadi bagian dari 
+                proses pendidikan.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Challenge</span></h4>
+            <p>
+                Hal yang cukup berbeda bagi 
+                saya adalah pemahaman 
+                bahwa profesionalisme guru 
+                tidak hanya diukur dari 
+                kemampuan menyampaikan 
+                materi atau mengelola kelas, 
+                tetapi juga dari bagaimana 
+                seorang guru menunjukkan 
+                keteladanan dan nilai moral 
+                dalam menjalankan 
+                tugasnya. Guru perlu 
+                memiliki integritas, 
+                kedisiplinan, tanggung jawab, 
+                serta kesadaran bahwa 
+                pekerjaannya merupakan 
+                bagian dari pengabdian. Hal 
+                ini membuat saya melihat 
+                kembali praktik mengajar 
+                yang selama ini saya 
+                lakukan, terutama 
+                bagaimana saya 
+                membangun hubungan 
+                dengan peserta didik dan 
+                menunjukkan sikap yang 
+                dapat menjadi contoh bagi 
+                mereka selama kegiatan 
+                PPL.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Concept</span></h4>
+            <p style="text-align: justify;">
+                Konsep utama yang saya 
+                pelajari adalah 
+                profesionalisme guru yang 
+                berlandaskan nilai-nilai Al 
+                Islam dan 
+                Kemuhammadiyahan. Guru 
+                tidak hanya dituntut memiliki 
+                kompetensi pedagogik dan 
+                profesional, tetapi juga 
+                memiliki akhlak, integritas, 
+                tanggung jawab, 
+                keteladanan, serta semangat 
+                untuk terus belajar dan 
+                memperbaiki diri. Saya 
+                memahami bahwa seorang 
+                guru seharusnya mampu 
+                menyelaraskan antara apa 
+                yang diajarkan dengan sikap 
+                yang ditunjukkan dalam 
+                kehidupan sehari-hari. 
+                Pemahaman tersebut 
+                menjadi penting bagi saya 
+                sebagai calon guru karena 
+                dalam pelaksanaan PPL 
+                saya tidak hanya belajar 
+                bagaimana mengajar, tetapi 
+                juga bagaimana menjadi 
+                pribadi yang dapat 
+                memberikan contoh positif 
+                kepada peserta didik.
+            </p>
+        </div>
+
+        <div class="reflection-card">
+            <div class="letter">C</div>
+            <h4><span>Change</span></h4>
+            <p style="text-align: justify;">
+                Setelah mempelajari mata 
+                kuliah ini, saya ingin lebih 
+                membangun profesionalisme 
+                diri melalui kedisiplinan, 
+                tanggung jawab, integritas, 
+                komunikasi yang baik, dan 
+                keteladanan dalam 
+                menjalankan tugas sebagai 
+                calon guru. Saya juga ingin 
+                membiasakan diri untuk terus 
+                melakukan refleksi terhadap 
+                cara saya mengajar dan 
+                bersikap sehingga dapat 
+                mengetahui hal-hal yang 
+                masih perlu diperbaiki. Bagi 
+                saya, menjadi guru 
+                profesional bukan berarti 
+                merasa sudah sempurna, 
+                tetapi memiliki kemauan 
+                untuk terus belajar, 
+                memperbaiki diri, dan 
+                memberikan manfaat bagi 
+                peserta didik. Hal tersebut 
+                ingin saya terapkan secara 
+                konsisten dalam pengalaman 
+                mengajar saya selama PPL 
+                di SMA Negeri 3 Mataram. 
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     KAITAN PRAKTIS
+===================================================== -->
+
+<section
+    class="practice-section"
+    id="praktis">
+
+<div class="container">
+
+
+<div class="section-title">
+
+    <span>
+        Future Practice
+    </span>
+
+    <h2>
+        Kaitan Praktis
+    </h2>
+
+    <p>
+        Bagaimana pembelajaran semester 2 diterjemahkan
+        menjadi tindakan nyata sebagai pendidik.
+    </p>
+
+</div>
+
+
+
+<div class="practice-box">
+
+    <h3>
+        🧠 Konsep Utama yang Dipelajari
+    </h3>
+
+    <p>
+        Lima mata kuliah memberikan pemahaman bahwa 
+        pembelajaran yang efektif perlu berpusat pada 
+        kebutuhan peserta didik. Pembelajaran Mendalam dan Asesmen
+         Lanjut mengajarkan pentingnya merancang pembelajaran berdasarkan
+          kebutuhan murid. Pembelajaran Sosial Emosional menekankan pengelolaan emosi dan
+           hubungan positif di kelas. Projek Kepemimpinan mengembangkan kemampuan berkolaborasi, mengambil keputusan, dan bertanggung jawab. 
+           Pendidikan Al-Islam dan Kemuhammadiyahan (AIK) memperkuat
+            nilai moral dan keteladanan, sedangkan Praktik Pengalaman Lapangan (PPL) membantu saya menerapkan teori 
+        melalui praktik mengajar dan refleksi berkelanjutan..
+    </p>
+
+</div>
+
+
+
+<div class="practice-box">
+
+    <h3>
+        🔄 Perubahan yang Ingin Dilakukan
+    </h3>
+
+    <p>
+        Saya ingin lebih konsisten memetakan kebutuhan dan kemampuan awal peserta didik sebelum merancang pembelajaran. Saya juga akan menggunakan metode dan media yang lebih bervariasi, menerapkan asesmen yang sesuai dengan tujuan pembelajaran, serta memberikan kesempatan yang merata kepada seluruh peserta didik untuk aktif. Selain itu, saya ingin meningkatkan kemampuan mengelola kelas, membangun komunikasi yang positif, dan melakukan refleksi setelah pembelajaran untuk menentukan perbaikan pada pertemuan berikutnya.
+    </p>
+
+</div>
+
+
+
+<div class="practice-box">
+
+    <h3>
+        🎯 Implementasi dalam Peran sebagai Pendidik
+    </h3>
+
+    <p>
+        Dalam pembelajaran Pendidikan Pancasila, saya akan menerapkan pembelajaran yang mendalam, kontekstual, dan berpihak pada kebutuhan peserta didik. Saya akan mengaitkan materi dengan kehidupan sehari-hari, seperti penerapan nilai-nilai Pancasila, demokrasi, hak dan kewajiban warga negara, serta menjaga keutuhan NKRI. Saya juga akan memanfaatkan diskusi kelompok, studi kasus, media digital, dan asesmen yang beragam agar peserta didik lebih aktif dan kritis. Melalui kolaborasi, pengelolaan sosial emosional, serta refleksi berkelanjutan, saya berharap dapat menjadi pendidik yang profesional, adaptif, dan mampu menciptakan lingkungan belajar yang inklusif serta bermakna.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     PENUTUP
+===================================================== -->
+
+<section class="final-section">
+
+<div class="container">
+
+<div class="final-content">
+
+    <h2>
+        Belajar → Merefleksi → Berubah
+    </h2>
+
+    <p>
+        Setiap pengalaman pembelajaran menjadi bagian dari
+        perjalanan untuk terus berkembang sebagai pendidik
+        yang reflektif, adaptif, dan berorientasi pada
+        kebutuhan peserta didik.
+    </p>
+
+    <div class="quote">
+
+        "Refleksi bukan hanya tentang melihat kembali
+        apa yang telah dilakukan, tetapi memahami
+        apa yang dipelajari dan menentukan perubahan
+        yang akan dilakukan."
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 April Mulyanas Arif, S.Pd.
+    </p>
+
+    <p>
+        Portofolio Seminar Pendidikan · Semester 2
+    </p>
+
+</footer>
+
+
+</body>
+</html>
